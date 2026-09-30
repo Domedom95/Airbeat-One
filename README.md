@@ -1,10 +1,3 @@
-Airbeat One v10 – natürlicherer Australien-Hintergrund.
-Weniger cartoonhaft, ruhiger und realistischer.
-
-Hochladen/ersetzen:
-- index.html
-- style-v10.css
-- app-v10.js
-- service-worker-v10.js
-
+Airbeat One v11 – echter Foto-Hintergrund mit australischer Straße und Känguru-Schild.
+Das vom Nutzer hochgeladene Bild ist direkt in style-v11.css eingebettet.
 config.js NICHT überschreiben.
