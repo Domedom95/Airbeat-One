@@ -8,9 +8,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=20">
+<link rel="manifest" href="./manifest.json?v=21">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v20.css?v=20">
+<link rel="stylesheet" href="./style-v21.css?v=21">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
@@ -43,12 +43,12 @@
     <h2>Welcome to<br><em>Australia.</em></h2>
     <p>Persönliche Packliste. Gemeinsamer Timetable. Gemeinsame Crew-Infos.</p>
 
-    <div class="countdown" aria-label="Countdown bis Airbeat One 2027">
+    <div class="countdown-wrap"><span class="countdown-label">Noch bis Airbeat One</span><div class="countdown" aria-label="Countdown bis Airbeat One 2027">
       <div><b id="cdDays">0</b><span>Tage</span></div>
       <div><b id="cdHours">0</b><span>Std.</span></div>
       <div><b id="cdMinutes">0</b><span>Min.</span></div>
       <div><b id="cdSeconds">0</b><span>Sek.</span></div>
-    </div>
+    </div></div>
   </article>
 
   <div class="home-status-row"><span>🔒 Packliste privat</span><span>☁️ Crew synchron</span></div>
@@ -104,13 +104,14 @@
   </div>
   <article class="map-card">
     <div class="map-placeholder">
-      <span>🗺️</span>
+      <div class="map-pin">🗺️</div>
       <strong>Festival Map 2027</strong>
-      <p>Hier kommt der offizielle Geländeplan rein, sobald er veröffentlicht wurde.</p>
+      <p>Sobald der offizielle Geländeplan veröffentlicht ist, kommt er hier direkt rein.</p>
+      <span class="map-badge">Offizieller Plan folgt</span>
     </div>
-    <div class="map-info">
-      <strong>Bis dahin</strong>
-      <p>Ihr könnt diesen Bereich schon als Treffpunkt-/Camp-Übersicht nutzen.</p>
+    <div class="map-quick-grid">
+      <div class="map-quick"><span>📍</span><div><strong>Treffpunkt</strong><small>Siehe Crew-Bereich</small></div></div>
+      <div class="map-quick"><span>⛺</span><div><strong>Camp</strong><small>Platz für eure Infos</small></div></div>
     </div>
   </article>
 </section>
@@ -127,7 +128,7 @@
 </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./config.js?v=20"></script>
-<script src="./app-v20.js?v=20"></script>
+<script src="./config.js?v=21"></script>
+<script src="./app-v21.js?v=21"></script>
 </body>
 </html>
