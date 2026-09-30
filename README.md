@@ -1,11 +1,11 @@
-Airbeat One v13 – hochauflösender Australien-Hintergrund
+Airbeat One v14 – sauberer Australien-Foto-Hintergrund ohne eingebrannte UI.
 
 Hochladen/ersetzen:
 - index.html
-- style-v13.css
-- app-v13.js
-- service-worker-v13.js
+- style-v14.css
+- app-v14.js
+- service-worker-v14.js
 
 WICHTIG:
 - config.js NICHT überschreiben.
-- Das HD-Hintergrundbild ist direkt in style-v13.css eingebettet.
+Das Hintergrundbild ist direkt in style-v14.css eingebettet.
