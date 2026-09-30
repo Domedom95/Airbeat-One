@@ -1,14 +1,13 @@
-Airbeat One v19 – aufgeräumte Startseite
+Airbeat One v20
 
-Geändert:
-- Packliste / Timetable / Crew Kacheln von der Startseite entfernt
-- Navigation bleibt ausschließlich unten
-- Startseite zeigt jetzt nur Hero, Countdown, kompakte Status-Hinweise und Sync-Status
+Fix:
+- Die drei Buttons/Kacheln "Meine Packliste", "Timetable" und "Crew" sind jetzt wirklich komplett von der Startseite entfernt.
+- Zusätzlich per CSS abgesichert, dass sie nicht mehr erscheinen können.
 
 Ersetzen:
 - index.html
-- style-v19.css
-- app-v19.js
-- service-worker-v19.js
+- style-v20.css
+- app-v20.js
+- service-worker-v20.js
 
 config.js NICHT überschreiben.
