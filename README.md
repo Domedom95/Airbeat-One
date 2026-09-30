@@ -1,16 +1,22 @@
-Airbeat One v21 – Feinschliff
+Airbeat One v22 – mehrere gemeinsame Treffpunkte
 
-Neu:
-- Countdown moderner und kompakter
-- Chat-Nachrichten als moderne Cards mit Initial-Avatar
-- Festival-Karte als hochwertiger vorbereiteter Bereich
-- Treffpunkt/Camp-Kurzinfos im Karten-Tab
+Neu im Crew-Bereich:
+- beliebig viele Treffpunkte
+- Name des Treffpunkts
+- Ort/Beschreibung
+- Datum + Uhrzeit
+- Name des Erstellers
+- optionale Notiz
+- Löschsymbol 🗑️ mit Sicherheitsabfrage
+- alles für alle Geräte über Supabase synchron
 
-Ersetzen:
+Einmalig in Supabase:
+`supabase-meeting-points-v22.sql` im SQL Editor ausführen.
+
+Dann bei GitHub ersetzen:
 - index.html
-- style-v21.css
-- app-v21.js
-- service-worker-v21.js
+- style-v22.css
+- app-v22.js
+- service-worker-v22.js
 
 config.js NICHT überschreiben.
-Für den Chat muss die SQL-Tabelle aus supabase-chat-v18.sql bereits angelegt sein.

@@ -8,9 +8,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=21">
+<link rel="manifest" href="./manifest.json?v=22">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v21.css?v=21">
+<link rel="stylesheet" href="./style-v22.css?v=22">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
@@ -76,12 +76,34 @@
 </section>
 
 <section class="page" data-page="crew">
-  <div class="title-row"><div><span class="eyebrow">GETEILT MIT ALLEN</span><h2>Crew</h2></div><button id="refreshCrew" class="ghost">↻</button></div>
+  <div class="title-row">
+    <div><span class="eyebrow">GETEILT MIT ALLEN</span><h2>Crew</h2></div>
+    <button id="refreshCrew" class="ghost">↻</button>
+  </div>
+
+  <article class="meeting-card">
+    <div class="meeting-head">
+      <div>
+        <span class="eyebrow">TREFFPUNKTE</span>
+        <h3>Gemeinsame Treffpunkte</h3>
+      </div>
+    </div>
+
+    <form id="meetingForm" class="meeting-form">
+      <input id="meetingTitle" placeholder="Name, z. B. Riesenrad" required>
+      <input id="meetingLocation" placeholder="Ort / Beschreibung" required>
+      <input id="meetingTime" type="datetime-local" required>
+      <input id="meetingName" placeholder="Dein Name" required>
+      <textarea id="meetingNote" rows="3" placeholder="Notiz (optional)"></textarea>
+      <button type="submit">Treffpunkt hinzufügen</button>
+    </form>
+
+    <div id="meetingList" class="meeting-list"></div>
+  </article>
+
   <div class="form-card">
-    <label><span>Treffpunkt</span><input id="meetingPoint" placeholder="z. B. Camp Eingang Nord"></label>
-    <label><span>Notizen</span><textarea id="crewNotes" rows="9" placeholder="Fahrgemeinschaft, Einkauf, wichtige Infos ..."></textarea></label>
-    <button id="saveCrew" class="save-btn">Für alle speichern</button>
-    <p>Diese Infos sehen anschließend alle, die eure App öffnen.</p>
+    <label><span>Gemeinsame Notizen</span><textarea id="crewNotes" rows="7" placeholder="Fahrgemeinschaft, Einkauf, wichtige Infos ..."></textarea></label>
+    <button id="saveCrew" class="save-btn">Notizen für alle speichern</button>
   </div>
 </section>
 
@@ -128,7 +150,7 @@
 </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./config.js?v=21"></script>
-<script src="./app-v21.js?v=21"></script>
+<script src="./config.js?v=22"></script>
+<script src="./app-v22.js?v=22"></script>
 </body>
 </html>
