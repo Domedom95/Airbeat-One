@@ -1,12 +1,13 @@
-# Airbeat One v2
+# Airbeat One v3
 
-Enthält:
-- Startseite
-- Packliste mit Checkboxen und eigenen Einträgen
-- Timetable mit Tag, Uhrzeit und Act/Treffpunkt
-- Crew-Notizen und Treffpunkt
-- lokale Speicherung im Browser
-- PWA-Grundlage für Installation auf dem Handy
+Neu:
+- komplett neues, sauberes Mobile-First-Design
+- Startseite als Dashboard
+- Packliste mit Fortschrittsanzeige
+- Timetable
+- Crew-Notizen
+- lokale Speicherung
+- Cache-Busting gegen alte GitHub-Pages-/PWA-Dateien
+- neue Service-Worker-Version
 
-Wichtig: Die Daten werden aktuell nur lokal auf dem jeweiligen Gerät gespeichert.
-Für gemeinsame Synchronisierung zwischen mehreren Freunden braucht die App später ein Backend / eine Datenbank.
+Beim Upload in GitHub bitte ALLE bisherigen Dateien durch diese Version ersetzen.

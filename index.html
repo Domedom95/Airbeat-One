@@ -2,119 +2,142 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b14">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Airbeat One">
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="./manifest.json?v=3">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style-v3.css?v=3">
   <title>Airbeat One</title>
 </head>
 <body>
-  <header class="topbar">
-    <div>
-      <div class="eyebrow">AIRBEAT ONE</div>
-      <h1>Festival Crew</h1>
-    </div>
-    <span class="badge">PWA</span>
-  </header>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <span class="kicker">AIRBEAT ONE</span>
+        <h1>Festival Crew</h1>
+      </div>
+      <div class="status-dot" title="Bereit"></div>
+    </header>
 
-  <main class="shell">
-    <section id="home" class="view active">
-      <div class="hero card">
-        <div>
-          <p class="eyebrow">Gemeinsam planen</p>
-          <h2>Alles für euren Airbeat an einem Ort.</h2>
-          <p class="muted">Packliste, Timetable und Crew-Notizen – direkt auf dem Handy.</p>
+    <main>
+      <section class="page active" data-page="home">
+        <article class="hero-card">
+          <span class="pill">Crew Planner</span>
+          <h2>Alles für euren Airbeat.<br>Einfach zusammen planen.</h2>
+          <p>Packliste, Timetable und Crew-Infos an einem Ort – optimiert fürs Handy.</p>
+        </article>
+
+        <div class="quick-grid">
+          <button class="quick-card" data-nav="packing">
+            <span class="quick-icon">🎒</span>
+            <span>
+              <strong>Packliste</strong>
+              <small>Checken & ergänzen</small>
+            </span>
+            <b>›</b>
+          </button>
+          <button class="quick-card" data-nav="timetable">
+            <span class="quick-icon">🎵</span>
+            <span>
+              <strong>Timetable</strong>
+              <small>Acts & Zeiten</small>
+            </span>
+            <b>›</b>
+          </button>
+          <button class="quick-card" data-nav="crew">
+            <span class="quick-icon">👥</span>
+            <span>
+              <strong>Crew</strong>
+              <small>Treffpunkt & Notizen</small>
+            </span>
+            <b>›</b>
+          </button>
         </div>
-      </div>
 
-      <div class="grid">
-        <button class="tile" data-open="packliste">
-          <span class="icon">🎒</span>
-          <strong>Packliste</strong>
-          <small>Abhaken & ergänzen</small>
-        </button>
-        <button class="tile" data-open="timetable">
-          <span class="icon">🗓️</span>
-          <strong>Timetable</strong>
-          <small>Acts & Zeiten planen</small>
-        </button>
-        <button class="tile" data-open="crew">
-          <span class="icon">👥</span>
-          <strong>Crew</strong>
-          <small>Notizen & Treffpunkte</small>
-        </button>
-      </div>
-    </section>
+        <article class="info-card">
+          <div>
+            <span class="kicker">OFFLINE-FÄHIG</span>
+            <strong>Für den Festival-Alltag gebaut</strong>
+          </div>
+          <p>Einträge bleiben auf deinem Gerät gespeichert. Gemeinsame Live-Synchronisierung können wir später ergänzen.</p>
+        </article>
+      </section>
 
-    <section id="packliste" class="view">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Vorbereitung</p>
-          <h2>Packliste</h2>
+      <section class="page" data-page="packing">
+        <div class="page-title">
+          <div>
+            <span class="kicker">VORBEREITUNG</span>
+            <h2>Packliste</h2>
+          </div>
+          <button class="small-btn" id="resetPacking">Reset</button>
         </div>
-        <button class="ghost" data-reset="packing">Zurücksetzen</button>
-      </div>
 
-      <div class="card">
-        <form id="packForm" class="add-row">
-          <input id="packInput" placeholder="Neuen Gegenstand hinzufügen" autocomplete="off">
-          <button>+</button>
+        <form class="add-form" id="packForm">
+          <input id="packInput" autocomplete="off" placeholder="z. B. Pavillon, Powerbank ...">
+          <button type="submit">Hinzufügen</button>
         </form>
-        <div id="packingList" class="list"></div>
-      </div>
-    </section>
 
-    <section id="timetable" class="view">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Festivalplan</p>
-          <h2>Timetable</h2>
+        <div class="progress-card">
+          <div class="progress-head">
+            <strong id="packProgressText">0 von 0 erledigt</strong>
+            <span id="packPercent">0%</span>
+          </div>
+          <div class="progress-track"><div id="packProgressBar"></div></div>
         </div>
-      </div>
 
-      <div class="card">
-        <form id="timeForm" class="time-form">
+        <div id="packingList" class="stack"></div>
+      </section>
+
+      <section class="page" data-page="timetable">
+        <div class="page-title">
+          <div>
+            <span class="kicker">FESTIVALPLAN</span>
+            <h2>Timetable</h2>
+          </div>
+        </div>
+
+        <form class="event-form" id="timeForm">
           <input id="timeDay" placeholder="Tag, z. B. Freitag" required>
           <input id="timeHour" type="time" required>
           <input id="timeAct" placeholder="Act / Treffpunkt" required>
-          <button>Hinzufügen</button>
+          <button type="submit">Eintragen</button>
         </form>
-        <div id="timeline" class="timeline"></div>
-      </div>
-    </section>
 
-    <section id="crew" class="view">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Gruppe</p>
-          <h2>Crew & Notizen</h2>
+        <div id="timeline" class="stack"></div>
+      </section>
+
+      <section class="page" data-page="crew">
+        <div class="page-title">
+          <div>
+            <span class="kicker">GRUPPE</span>
+            <h2>Crew</h2>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <label class="field">
-          <span>Treffpunkt</span>
-          <input id="meetingPoint" placeholder="z. B. Camp Eingang Nord">
-        </label>
-        <label class="field">
-          <span>Gemeinsame Notizen</span>
-          <textarea id="crewNotes" rows="8" placeholder="Fahrgemeinschaft, Einkauf, wichtige Infos ..."></textarea>
-        </label>
-        <p class="muted small">Diese Daten werden aktuell nur auf diesem Gerät gespeichert.</p>
-      </div>
-    </section>
-  </main>
 
-  <nav class="bottomnav">
-    <button class="navbtn active" data-open="home">🏠<span>Start</span></button>
-    <button class="navbtn" data-open="packliste">🎒<span>Packliste</span></button>
-    <button class="navbtn" data-open="timetable">🗓️<span>Timetable</span></button>
-    <button class="navbtn" data-open="crew">👥<span>Crew</span></button>
-  </nav>
+        <article class="form-card">
+          <label>
+            <span>Treffpunkt</span>
+            <input id="meetingPoint" placeholder="z. B. Camp Eingang Nord">
+          </label>
+          <label>
+            <span>Notizen</span>
+            <textarea id="crewNotes" rows="9" placeholder="Fahrgemeinschaft, Einkäufe, wichtige Infos ..."></textarea>
+          </label>
+          <p class="hint">Aktuell werden diese Daten nur auf diesem Gerät gespeichert.</p>
+        </article>
+      </section>
+    </main>
 
-  <script src="app.js"></script>
+    <nav class="bottom-nav" aria-label="Navigation">
+      <button class="nav-item active" data-nav="home"><span>⌂</span><small>Start</small></button>
+      <button class="nav-item" data-nav="packing"><span>🎒</span><small>Packliste</small></button>
+      <button class="nav-item" data-nav="timetable"><span>♫</span><small>Timetable</small></button>
+      <button class="nav-item" data-nav="crew"><span>👥</span><small>Crew</small></button>
+    </nav>
+  </div>
+  <script src="./app-v3.js?v=3"></script>
 </body>
 </html>
