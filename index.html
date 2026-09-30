@@ -8,9 +8,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=22">
+<link rel="manifest" href="./manifest.json?v=23">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v22.css?v=22">
+<link rel="stylesheet" href="./style-v23.css?v=23">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
@@ -76,9 +76,8 @@
 </section>
 
 <section class="page" data-page="crew">
-  <div class="title-row">
-    <div><span class="eyebrow">GETEILT MIT ALLEN</span><h2>Crew</h2></div>
-    <button id="refreshCrew" class="ghost">↻</button>
+  <div class="crew-toolbar">
+    <button id="refreshCrew" class="ghost">↻ Aktualisieren</button>
   </div>
 
   <article class="meeting-card">
@@ -101,10 +100,6 @@
     <div id="meetingList" class="meeting-list"></div>
   </article>
 
-  <div class="form-card">
-    <label><span>Gemeinsame Notizen</span><textarea id="crewNotes" rows="7" placeholder="Fahrgemeinschaft, Einkauf, wichtige Infos ..."></textarea></label>
-    <button id="saveCrew" class="save-btn">Notizen für alle speichern</button>
-  </div>
 </section>
 
 <section class="page" data-page="chat">
@@ -150,7 +145,7 @@
 </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./config.js?v=22"></script>
-<script src="./app-v22.js?v=22"></script>
+<script src="./config.js?v=23"></script>
+<script src="./app-v23.js?v=23"></script>
 </body>
 </html>

@@ -1,22 +1,19 @@
-Airbeat One v22 – mehrere gemeinsame Treffpunkte
+Airbeat One v23 – Crew aufgeräumt
 
-Neu im Crew-Bereich:
-- beliebig viele Treffpunkte
-- Name des Treffpunkts
-- Ort/Beschreibung
-- Datum + Uhrzeit
-- Name des Erstellers
-- optionale Notiz
-- Löschsymbol 🗑️ mit Sicherheitsabfrage
-- alles für alle Geräte über Supabase synchron
+Entfernt:
+- "GETEILT MIT ALLEN"
+- große "Crew"-Überschrift im Crew-Bereich
+- Bereich "Gemeinsame Notizen"
 
-Einmalig in Supabase:
-`supabase-meeting-points-v22.sql` im SQL Editor ausführen.
+Bleibt:
+- mehrere gemeinsame Treffpunkte
+- Löschen-Symbol
+- Aktualisieren-Button
 
-Dann bei GitHub ersetzen:
+Ersetzen:
 - index.html
-- style-v22.css
-- app-v22.js
-- service-worker-v22.js
+- style-v23.css
+- app-v23.js
+- service-worker-v23.js
 
 config.js NICHT überschreiben.
