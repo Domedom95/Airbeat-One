@@ -1,1 +1,1 @@
-Airbeat One v15 – untere Leiste transparenter gemacht.\n\nErsetzen:\n- index.html\n- style-v15.css\n- app-v15.js\n- service-worker-v15.js\n\nconfig.js NICHT überschreiben.\n
+Airbeat One v16 – moderneres Startscreen-Layout.\n\nGeändert:\n- kleine Untertexte auf den drei Start-Karten entfernt\n- Untertexte in den beiden Info-Bannern entfernt\n- Hero oben kompakter, weniger Leerraum\n- Bottom-Bar moderner/floating\n\nErsetzen:\n- index.html\n- style-v16.css\n- app-v16.js\n- service-worker-v16.js\n\nconfig.js NICHT überschreiben.\n

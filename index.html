@@ -8,9 +8,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=15">
+<link rel="manifest" href="./manifest.json?v=16">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v15.css?v=15">
+<link rel="stylesheet" href="./style-v16.css?v=16">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
@@ -32,16 +32,16 @@
   </article>
 
   <div class="cards">
-    <button data-nav="packing"><span>🎒</span><div><strong>Meine Packliste</strong><small>Nur auf deinem Gerät</small></div><b>›</b></button>
-    <button data-nav="timetable"><span>🎵</span><div><strong>Timetable</strong><small>Für alle synchron</small></div><b>›</b></button>
-    <button data-nav="crew"><span>👥</span><div><strong>Crew</strong><small>Für alle synchron</small></div><b>›</b></button>
+    <button data-nav="packing"><span>🎒</span><div><strong>Meine Packliste</strong></div><b>›</b></button>
+    <button data-nav="timetable"><span>🎵</span><div><strong>Timetable</strong></div><b>›</b></button>
+    <button data-nav="crew"><span>👥</span><div><strong>Crew</strong></div><b>›</b></button>
   </div>
 
-  <article class="notice personal">
-    <span>🔒</span><div><strong>Packliste bleibt privat</strong><p>Jeder Freund hat seine eigene Liste auf seinem Gerät.</p></div>
+  <article class="notice personal compact">
+    <span>🔒</span><div><strong>Packliste bleibt privat</strong></div>
   </article>
-  <article class="notice shared">
-    <span>☁️</span><div><strong>Timetable & Crew werden geteilt</strong><p>Einträge werden für alle Geräte über Supabase synchronisiert.</p></div>
+  <article class="notice shared compact">
+    <span>☁️</span><div><strong>Timetable & Crew werden geteilt</strong></div>
   </article>
   <article id="syncStatus" class="sync-status">Synchronisierung wird geprüft …</article>
 </section>
@@ -85,7 +85,7 @@
 </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./config.js?v=15"></script>
-<script src="./app-v15.js?v=15"></script>
+<script src="./config.js?v=16"></script>
+<script src="./app-v16.js?v=16"></script>
 </body>
 </html>
