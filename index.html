@@ -8,12 +8,25 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=17">
+<link rel="manifest" href="./manifest.json?v=18">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v17.css?v=17">
+<link rel="stylesheet" href="./style-v18.css?v=18">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
+
+<div id="loginGate" class="login-gate">
+  <div class="login-card">
+    <span class="eyebrow">AIRBEAT ONE 2027</span>
+    <h2>Crew-Zugang</h2>
+    <p>Gib den Crew-Code ein, um die App zu öffnen.</p>
+    <form id="loginForm">
+      <input id="loginCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="Crew-Code">
+      <button type="submit">Öffnen</button>
+    </form>
+    <small id="loginError"></small>
+  </div>
+</div>
 <div class="app">
 <header>
   <div>
@@ -29,6 +42,13 @@
     <span class="chip">07.–11. JULI 2027 · NEUSTADT-GLEWE</span>
     <h2>Welcome to<br><em>Australia.</em></h2>
     <p>Persönliche Packliste. Gemeinsamer Timetable. Gemeinsame Crew-Infos.</p>
+
+    <div class="countdown" aria-label="Countdown bis Airbeat One 2027">
+      <div><b id="cdDays">0</b><span>Tage</span></div>
+      <div><b id="cdHours">0</b><span>Std.</span></div>
+      <div><b id="cdMinutes">0</b><span>Min.</span></div>
+      <div><b id="cdSeconds">0</b><span>Sek.</span></div>
+    </div>
   </article>
 
   <div class="cards">
@@ -75,17 +95,50 @@
     <p>Diese Infos sehen anschließend alle, die eure App öffnen.</p>
   </div>
 </section>
+
+<section class="page" data-page="chat">
+  <div class="title-row">
+    <div><span class="eyebrow">CREW CHAT</span><h2>Chat</h2></div>
+    <button id="refreshChat" class="ghost">↻</button>
+  </div>
+  <form id="chatForm" class="chat-form">
+    <input id="chatName" placeholder="Dein Name" required>
+    <input id="chatMessage" placeholder="Nachricht schreiben …" maxlength="500" required>
+    <button type="submit">Senden</button>
+  </form>
+  <div id="chatList" class="chat-list"></div>
+</section>
+
+<section class="page" data-page="map">
+  <div class="title-row">
+    <div><span class="eyebrow">GELÄNDE</span><h2>Festival-Karte</h2></div>
+  </div>
+  <article class="map-card">
+    <div class="map-placeholder">
+      <span>🗺️</span>
+      <strong>Festival Map 2027</strong>
+      <p>Hier kommt der offizielle Geländeplan rein, sobald er veröffentlicht wurde.</p>
+    </div>
+    <div class="map-info">
+      <strong>Bis dahin</strong>
+      <p>Ihr könnt diesen Bereich schon als Treffpunkt-/Camp-Übersicht nutzen.</p>
+    </div>
+  </article>
+</section>
+
 </main>
 
 <nav>
 <button class="active" data-nav="home"><span>🏠</span><small>Start</small></button>
 <button data-nav="packing"><span>🎒</span><small>Packliste</small></button>
 <button data-nav="timetable"><span>🎵</span><small>Timetable</small></button>
+<button data-nav="chat"><span>💬</span><small>Chat</small></button>
+<button data-nav="map"><span>🗺️</span><small>Karte</small></button>
 <button data-nav="crew"><span>👥</span><small>Crew</small></button>
 </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./config.js?v=17"></script>
-<script src="./app-v17.js?v=17"></script>
+<script src="./config.js?v=18"></script>
+<script src="./app-v18.js?v=18"></script>
 </body>
 </html>
