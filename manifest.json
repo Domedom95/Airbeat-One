@@ -1,12 +1,12 @@
 {
   "name": "Airbeat One",
   "short_name": "Airbeat",
-  "description": "Gemeinsame Airbeat-Planung",
+  "description": "Packliste, Timetable und Crew-Planung für Airbeat One.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#111827",
+  "background_color": "#08111f",
+  "theme_color": "#0f172a",
   "icons": [
     {
       "src": "icons/icon-192.png",

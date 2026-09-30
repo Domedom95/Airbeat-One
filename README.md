@@ -1,17 +1,12 @@
-# Airbeat One PWA
+# Airbeat One v2
 
-Kleine installierbare Web-App für GitHub Pages.
+Enthält:
+- Startseite
+- Packliste mit Checkboxen und eigenen Einträgen
+- Timetable mit Tag, Uhrzeit und Act/Treffpunkt
+- Crew-Notizen und Treffpunkt
+- lokale Speicherung im Browser
+- PWA-Grundlage für Installation auf dem Handy
 
-## GitHub Pages aktivieren
-1. Repository öffnen
-2. Settings
-3. Pages
-4. Source: Deploy from a branch
-5. Branch: main
-6. Ordner: / (root)
-7. Save
-
-Danach ist die Seite normalerweise unter:
-https://DEIN-GITHUB-NAME.github.io/REPOSITORY-NAME/
-
-erreichbar.
+Wichtig: Die Daten werden aktuell nur lokal auf dem jeweiligen Gerät gespeichert.
+Für gemeinsame Synchronisierung zwischen mehreren Freunden braucht die App später ein Backend / eine Datenbank.
