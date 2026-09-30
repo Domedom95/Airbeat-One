@@ -1,11 +1,1 @@
-Airbeat One v14 – sauberer Australien-Foto-Hintergrund ohne eingebrannte UI.
-
-Hochladen/ersetzen:
-- index.html
-- style-v14.css
-- app-v14.js
-- service-worker-v14.js
-
-WICHTIG:
-- config.js NICHT überschreiben.
-Das Hintergrundbild ist direkt in style-v14.css eingebettet.
+Airbeat One v15 – untere Leiste transparenter gemacht.\n\nErsetzen:\n- index.html\n- style-v15.css\n- app-v15.js\n- service-worker-v15.js\n\nconfig.js NICHT überschreiben.\n
