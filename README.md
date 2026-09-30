@@ -1,13 +1,4 @@
-# Airbeat One v3
+# Airbeat One 2027 – Flat Upload Version
 
-Neu:
-- komplett neues, sauberes Mobile-First-Design
-- Startseite als Dashboard
-- Packliste mit Fortschrittsanzeige
-- Timetable
-- Crew-Notizen
-- lokale Speicherung
-- Cache-Busting gegen alte GitHub-Pages-/PWA-Dateien
-- neue Service-Worker-Version
-
-Beim Upload in GitHub bitte ALLE bisherigen Dateien durch diese Version ersetzen.
+Alle Dateien liegen im Hauptordner, damit du sie direkt über GitHub "Upload files"
+hochladen kannst. Es werden keine Unterordner benötigt.
