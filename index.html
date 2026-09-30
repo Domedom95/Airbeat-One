@@ -7,21 +7,16 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=4">
+<link rel="manifest" href="./manifest.json?v=5">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v4.css?v=4">
+<link rel="stylesheet" href="./style-v5.css?v=5">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
-<div class="bg"></div>
-<div class="overlay"></div>
-
+<div class="bg"></div><div class="overlay"></div>
 <div class="app">
 <header>
-  <div>
-    <span class="eyebrow">AIRBEAT ONE 2027</span>
-    <h1>Festival Crew</h1>
-  </div>
+  <div><span class="eyebrow">AIRBEAT ONE 2027</span><h1>Festival Crew</h1></div>
   <span class="australia">AUSTRALIA</span>
 </header>
 
@@ -30,52 +25,51 @@
   <article class="hero">
     <span class="chip">07.–11. JULI 2027 · NEUSTADT-GLEWE</span>
     <h2>Welcome to<br><em>Australia.</em></h2>
-    <p>Dein privater Crew-Planer für Airbeat One 2027.</p>
+    <p>Persönliche Packliste. Gemeinsamer Timetable. Gemeinsame Crew-Infos.</p>
   </article>
 
   <div class="cards">
     <button data-nav="packing"><span>🎒</span><div><strong>Meine Packliste</strong><small>Nur auf deinem Gerät</small></div><b>›</b></button>
-    <button data-nav="timetable"><span>🎵</span><div><strong>Timetable</strong><small>Acts & Treffpunkte</small></div><b>›</b></button>
-    <button data-nav="crew"><span>👥</span><div><strong>Crew</strong><small>Notizen & Treffpunkt</small></div><b>›</b></button>
+    <button data-nav="timetable"><span>🎵</span><div><strong>Timetable</strong><small>Für alle synchron</small></div><b>›</b></button>
+    <button data-nav="crew"><span>👥</span><div><strong>Crew</strong><small>Für alle synchron</small></div><b>›</b></button>
   </div>
 
-  <article class="notice">
-    <span>🔒</span>
-    <div><strong>Deine Packliste ist persönlich</strong><p>Jeder Freund sieht auf seinem eigenen Handy nur seine eigene Packliste.</p></div>
+  <article class="notice personal">
+    <span>🔒</span><div><strong>Packliste bleibt privat</strong><p>Jeder Freund hat seine eigene Liste auf seinem Gerät.</p></div>
   </article>
+  <article class="notice shared">
+    <span>☁️</span><div><strong>Timetable & Crew werden geteilt</strong><p>Einträge werden für alle Geräte über Supabase synchronisiert.</p></div>
+  </article>
+  <article id="syncStatus" class="sync-status">Synchronisierung noch nicht eingerichtet.</article>
 </section>
 
 <section class="page" data-page="packing">
   <div class="title-row"><div><span class="eyebrow">PERSÖNLICH</span><h2>Meine Packliste</h2></div><button id="resetPacking" class="ghost">Reset</button></div>
-  <div class="personal-banner"><span>👤</span><div><strong>Nur für dich</strong><small>Wird lokal in deinem Browser gespeichert.</small></div></div>
-  <form id="packForm" class="add-form">
-    <input id="packInput" placeholder="Was willst du einpacken?" autocomplete="off">
-    <button>+</button>
-  </form>
-  <div class="progress">
-    <div><span id="progressText">0 von 0 erledigt</span><b id="progressPct">0%</b></div>
-    <i><u id="progressBar"></u></i>
-  </div>
+  <div class="personal-banner"><span>👤</span><div><strong>Nur für dich</strong><small>Lokal in deinem Browser gespeichert.</small></div></div>
+  <form id="packForm" class="add-form"><input id="packInput" placeholder="Was willst du einpacken?" autocomplete="off"><button>+</button></form>
+  <div class="progress"><div><span id="progressText">0 von 0 erledigt</span><b id="progressPct">0%</b></div><i><u id="progressBar"></u></i></div>
   <div id="packingList" class="list"></div>
 </section>
 
 <section class="page" data-page="timetable">
-  <div class="title-row"><div><span class="eyebrow">FESTIVALPLAN</span><h2>Timetable</h2></div></div>
+  <div class="title-row"><div><span class="eyebrow">GETEILT MIT ALLEN</span><h2>Timetable</h2></div><button id="refreshTimetable" class="ghost">↻</button></div>
   <form id="timeForm" class="time-form">
     <input id="timeDay" placeholder="Tag, z. B. Freitag" required>
     <input id="timeHour" type="time" required>
     <input id="timeAct" placeholder="Act / Treffpunkt" required>
+    <input id="timeName" placeholder="Dein Name" required>
     <button>Eintragen</button>
   </form>
   <div id="timeline" class="list"></div>
 </section>
 
 <section class="page" data-page="crew">
-  <div class="title-row"><div><span class="eyebrow">GRUPPE</span><h2>Crew</h2></div></div>
+  <div class="title-row"><div><span class="eyebrow">GETEILT MIT ALLEN</span><h2>Crew</h2></div><button id="refreshCrew" class="ghost">↻</button></div>
   <div class="form-card">
     <label><span>Treffpunkt</span><input id="meetingPoint" placeholder="z. B. Camp Eingang Nord"></label>
     <label><span>Notizen</span><textarea id="crewNotes" rows="9" placeholder="Fahrgemeinschaft, Einkauf, wichtige Infos ..."></textarea></label>
-    <p>Diese Notizen sind aktuell ebenfalls nur auf diesem Gerät gespeichert.</p>
+    <button id="saveCrew" class="save-btn">Für alle speichern</button>
+    <p>Diese Infos sehen anschließend alle, die eure App öffnen.</p>
   </div>
 </section>
 </main>
@@ -87,6 +81,8 @@
 <button data-nav="crew"><span>👥</span><small>Crew</small></button>
 </nav>
 </div>
-<script src="./app-v4.js?v=4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./config.js?v=5"></script>
+<script src="./app-v5.js?v=5"></script>
 </body>
 </html>
