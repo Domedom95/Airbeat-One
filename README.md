@@ -1,2 +1,2 @@
-V8 behebt den unsichtbaren Hintergrund: .bg/.overlay lagen mit negativem z-index hinter dem Body-Hintergrund.
+V9: Hintergrund liegt direkt auf BODY als eingebettetes Bild. Keine z-index-Ebenen mehr.
 config.js NICHT überschreiben.
