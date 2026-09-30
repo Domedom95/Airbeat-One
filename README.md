@@ -1,19 +1,9 @@
-# Airbeat One v6 – sichtbarer Australien-Hintergrund
+# Airbeat One v7 – Hintergrund direkt eingebettet
 
-Diese Version verbessert vor allem das Design:
-- deutlich sichtbarer Australia-/Outback-Hintergrund
-- transparentere Karten
-- helleres Overlay
-- config.js wird NICHT mehr hart gecached, damit Supabase-Änderungen sauber übernommen werden
-
-## Upload
-Lade diese Dateien in GitHub hoch und ersetze die bisherigen Dateien:
-- index.html
-- style-v6.css
-- app-v6.js
-- service-worker-v6.js
-- australia-bg-v6.jpg
+Der Australia-Hintergrund steckt jetzt direkt in `style-v7.css`.
+Damit gibt es keine separate JPG-Datei mehr, die GitHub Pages verfehlen oder cachen könnte.
 
 WICHTIG:
-- Deine bestehende `config.js` mit Supabase-Daten NICHT überschreiben.
-- `manifest.json`, `icon-192.png` und `icon-512.png` können bleiben, müssen aber nicht neu hochgeladen werden.
+- `config.js` NICHT überschreiben.
+- Lade `index.html`, `style-v7.css`, `app-v7.js`, `service-worker-v7.js`
+  sowie bei Bedarf `manifest.json` und die Icons hoch.
