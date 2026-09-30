@@ -3,20 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07111f">
+<meta name="theme-color" content="#0a1324">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=5">
+<link rel="manifest" href="./manifest.json?v=6">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v5.css?v=5">
+<link rel="stylesheet" href="./style-v6.css?v=6">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
-<div class="bg"></div><div class="overlay"></div>
+<div class="bg"></div>
+<div class="overlay"></div>
+
 <div class="app">
 <header>
-  <div><span class="eyebrow">AIRBEAT ONE 2027</span><h1>Festival Crew</h1></div>
+  <div>
+    <span class="eyebrow">AIRBEAT ONE 2027</span>
+    <h1>Festival Crew</h1>
+  </div>
   <span class="australia">AUSTRALIA</span>
 </header>
 
@@ -40,7 +46,7 @@
   <article class="notice shared">
     <span>☁️</span><div><strong>Timetable & Crew werden geteilt</strong><p>Einträge werden für alle Geräte über Supabase synchronisiert.</p></div>
   </article>
-  <article id="syncStatus" class="sync-status">Synchronisierung noch nicht eingerichtet.</article>
+  <article id="syncStatus" class="sync-status">Synchronisierung wird geprüft …</article>
 </section>
 
 <section class="page" data-page="packing">
@@ -83,6 +89,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="./config.js?v=6"></script>
-<script src="./app-v5.js?v=5"></script>
+<script src="./app-v6.js?v=6"></script>
 </body>
 </html>
