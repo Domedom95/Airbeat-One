@@ -1,17 +1,14 @@
-Airbeat One v18
+Airbeat One v19 – aufgeräumte Startseite
 
-Neu:
-- Login/Crew-Code: 123456
-- Countdown bis 07.07.2027
-- gemeinsamer Supabase-Chat
-- Festival-Karte als eigener Bereich/Placeholder
-- 6er Bottom-Navigation
+Geändert:
+- Packliste / Timetable / Crew Kacheln von der Startseite entfernt
+- Navigation bleibt ausschließlich unten
+- Startseite zeigt jetzt nur Hero, Countdown, kompakte Status-Hinweise und Sync-Status
 
-Wichtig:
-1. config.js NICHT überschreiben.
-2. In Supabase SQL Editor einmal `supabase-chat-v18.sql` ausführen.
-3. Dann die vier App-Dateien bei GitHub hochladen.
+Ersetzen:
+- index.html
+- style-v19.css
+- app-v19.js
+- service-worker-v19.js
 
-Hinweis:
-Der Code 123456 ist nur ein einfacher clientseitiger Zugangsschutz. Wer den Quellcode untersucht, kann ihn finden.
-Für echten privaten Schutz wäre später Supabase Auth sinnvoll.
+config.js NICHT überschreiben.
