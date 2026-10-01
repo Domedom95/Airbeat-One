@@ -8,9 +8,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Airbeat One">
-<link rel="manifest" href="./manifest.json?v=23">
+<link rel="manifest" href="./manifest.json?v=24">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="stylesheet" href="./style-v23.css?v=23">
+<link rel="stylesheet" href="./style-v24.css?v=24">
 <title>Airbeat One – Crew Planner</title>
 </head>
 <body>
@@ -53,6 +53,35 @@
 
   <div class="home-status-row"><span>🔒 Packliste privat</span><span>☁️ Crew synchron</span></div>
   <article id="syncStatus" class="sync-status">Synchronisierung wird geprüft …</article>
+
+  <section class="moments-section">
+    <div class="moments-head">
+      <div>
+        <span class="eyebrow">FESTIVAL MOMENTE</span>
+        <h3>Beste Erinnerungen</h3>
+      </div>
+      <button id="refreshMoments" class="ghost">↻</button>
+    </div>
+
+    <form id="momentForm" class="moment-form">
+      <label class="moment-file">
+        <input id="momentFile" type="file" accept="image/*" required>
+        <span>📷 Foto auswählen</span>
+      </label>
+      <input id="momentName" placeholder="Dein Name" required>
+      <input id="momentCaption" placeholder="Kurzer Text zum Foto (optional)" maxlength="120">
+      <button type="submit">Moment hochladen</button>
+    </form>
+
+    <div id="momentUploadStatus" class="moment-upload-status"></div>
+    <div id="momentsGrid" class="moments-grid"></div>
+  </section>
+
+  <div id="momentLightbox" class="moment-lightbox hidden" aria-hidden="true">
+    <button id="closeMomentLightbox" class="lightbox-close" aria-label="Schließen">✕</button>
+    <img id="momentLightboxImage" alt="Festival Moment">
+    <div id="momentLightboxCaption" class="lightbox-caption"></div>
+  </div>
 </section>
 
 <section class="page" data-page="packing">
@@ -145,7 +174,7 @@
 </nav>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./config.js?v=23"></script>
-<script src="./app-v23.js?v=23"></script>
+<script src="./config.js?v=24"></script>
+<script src="./app-v24.js?v=24"></script>
 </body>
 </html>
